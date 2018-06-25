@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  form {
+    margin: 15px;
+  }
+  
+  .form-header {
+    padding: 25px;
+    background-color: #E7EFF2;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #2d405a;
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    background-color: #d7e6e6;
+    padding: 25px;
+    margin: 25px 0px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .field-and-label-container {
+    display: flex;
+    // line-height: 44px;
+    height: 48px;
+    box-sizing: border-box; // the height remains the same after error msg is displayed
+  }
+  
+  label {
+    width: 40%;
+    max-width: 150px;
+    margin-top: 8px;
+  }
+  
+  input:not([type='checkbox']) {
+    flex-grow: 1;
+    box-shadow: 1px 1px 1px 1px #bdc1c5;
+    border: 0px;
+    width: 90%;
+    max-width: 600px;
+    padding: 0.3rem 0.3rem;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+  }
+  
+  .error:not(.clean) input:not([type='checkbox']) {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px red;
+  }
+  .error-msg {
+    display: none;
+  }
+  .error:not(.clean) .error-msg {
+    display: block;
+    color: red;
+    padding-top: 3px;
+    font-size: 0.85rem;
+    // line-height: initial;
+  }
+  
+  .input-checkbox {
+    width: 20px;
+    white-space: nowrap;
+    overflow: visible;
+    margin-top: 8px;
+  }
+  
+  button {
+    padding: 8px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    border-radius: 5px;
+    background-color: #009dc2;
+  }
+  
+  button:focus {
+    box-shadow: none;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .w-90 {
+    width: 90%;
+  }
+  
