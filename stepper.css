@@ -1,0 +1,144 @@
+/* Need to go back and clean this up. Make names more specific. Maybe use sass? */
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:700|Roboto");
+
+:root {
+  --primary: #F57F20;
+  --primary-dark: #E56F10;
+  --primary-text: #fff;
+  --secondary: rgba(0, 0, 0, 0.38);
+  --disabled: rgb(188, 188, 188);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.stepper .heading {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Amatic SC", cursive;
+  font-size: 4rem;
+}
+
+.stepper h2.heading {
+  font-size: 3rem;
+}
+
+ .container .stepper {
+  /* width: 80%;
+  margin: 4rem auto;
+  padding: 2.5rem; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.016);
+}
+
+/* Stepper */
+.stepper .steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  margin: 0 0 2rem 0;
+}
+
+.stepper .step {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  transition: 0.5s;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.stepper .step:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.02s;
+}
+
+.stepper .step:active .label {
+  color: rgb(29, 29, 29);
+}
+
+.stepper .step .icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: var(--secondary);
+  color: var(--primary-text);
+  margin-right: 0.5rem;
+}
+.stepper .step.active .icon,
+.stepper .step.complete .icon {
+  background-color: var(--primary);
+}
+
+.stepper .step-divider {
+  flex: 1;
+  border-top-style: solid;
+  border-color: #bdbdbd;
+  border-top-width: 1px;
+}
+
+.stepper.step .label {
+  color: rgb(180, 180, 180);
+}
+
+.stepper .step.active .label {
+  color: rgb(29, 29, 29);
+}
+
+/* Button Styles*/
+.stepper .btn {
+  color: var(--primary-text);
+  background-color: var(--primary);
+  text-transform: uppercase;
+  cursor: pointer;
+  min-height: 2.5rem;
+  min-width: 6rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.stepper .btn:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.stepper .btn[disabled] {
+  background: none;
+  box-shadow: none;
+  color: var(--disabled);
+  cursor: default;
+}
+.stepper .btn:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.stepper .btn:focus {
+  background-color: var(--primary-dark);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Finished is hidden by default. Displays when all steps are complete. */
+.stepper .step-finish {
+  display: none;
+}
+
+.success_inner.d-block + .buttons {
+    display:none;
+}
